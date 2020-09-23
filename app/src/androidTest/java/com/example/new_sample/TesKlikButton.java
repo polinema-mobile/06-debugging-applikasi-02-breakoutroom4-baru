@@ -72,18 +72,6 @@ public class TesKlikButton {
     }
 
     @Test
-    public void tombolpara1(){
-        onView(withId(R.id.button_para1)).perform(click());
-        onView(withId(R.id.input)).check(matches(withText("")));
-    }
-
-    @Test
-    public void tombolpara2(){
-        onView(withId(R.id.button_para2)).perform(click());
-        onView(withId(R.id.input)).check(matches(withText("")));
-    }
-
-    @Test
     public void tombolclear(){
         onView(withId(R.id.button_clear)).perform(click());
         onView(withId(R.id.input)).check(matches(withText("")));
