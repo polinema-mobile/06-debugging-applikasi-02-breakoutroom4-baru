@@ -10,7 +10,9 @@ import org.junit.runner.RunWith;
 
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.click;
+import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
+import static androidx.test.espresso.matcher.ViewMatchers.withText;
 
 @LargeTest
 @RunWith(AndroidJUnit4.class)
@@ -19,10 +21,13 @@ public class Bagitest {
     public ActivityTestRule<MainActivity> mActivityTestRule = new ActivityTestRule<>(MainActivity.class);
     @Test
     public void tesKlikButtonbagi() {
-        onView(withId(R.id.button6)).perform(click());
+        onView(withId(R.id.button8)).perform(click());
+        onView(withId(R.id.button_divide)).perform(click());
+        onView(withId(R.id.button2)).perform(click());
         onView(withId(R.id.button_divide)).perform(click());
         onView(withId(R.id.button2)).perform(click());
         onView(withId(R.id.button_equal)).perform(click());
+        onView(withId(R.id.input)).check(matches(withText("2")));
 
     }
 }

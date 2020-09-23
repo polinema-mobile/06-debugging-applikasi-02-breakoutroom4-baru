@@ -10,7 +10,9 @@ import org.junit.runner.RunWith;
 
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.click;
+import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
+import static androidx.test.espresso.matcher.ViewMatchers.withText;
 
 @LargeTest
 @RunWith(AndroidJUnit4.class)
@@ -22,7 +24,10 @@ public class KaliTest {
         onView(withId(R.id.button7)).perform(click());
         onView(withId(R.id.button_multi)).perform(click());
         onView(withId(R.id.button9)).perform(click());
+        onView(withId(R.id.button_multi)).perform(click());
+        onView(withId(R.id.button2)).perform(click());
         onView(withId(R.id.button_equal)).perform(click());
+        onView(withId(R.id.input)).check(matches(withText("126")));
 
     }
 }

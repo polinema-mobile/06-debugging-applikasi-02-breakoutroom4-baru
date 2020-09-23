@@ -25,6 +25,8 @@ public class Plustest {
         onView(withId(R.id.button1)).perform(click());
         onView(withId(R.id.button_add)).perform(click());
         onView(withId(R.id.button2)).perform(click());
+        onView(withId(R.id.button_add)).perform(click());
+        onView(withId(R.id.button3)).perform(click());
         onView(withId(R.id.button_equal)).perform(click());
 
     }
