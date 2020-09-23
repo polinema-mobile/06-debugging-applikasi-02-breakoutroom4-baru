@@ -33,6 +33,10 @@ public class TesKlikButton {
         onView(withId(R.id.button8)).perform(click());
         onView(withId(R.id.button9)).perform(click());
         onView(withId(R.id.button0)).perform(click());
+        onView(withId(R.id.button_clear)).perform(click());
+        onView(withId(R.id.button_para1)).perform(click());
+        onView(withId(R.id.button_para2)).perform(click());
+        onView(withId(R.id.button_dot)).perform(click());
         onView(withId(R.id.input)).check(matches(withText("1234567890")));
     }
 
