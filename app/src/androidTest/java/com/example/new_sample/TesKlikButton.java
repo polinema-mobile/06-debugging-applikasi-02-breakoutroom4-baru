@@ -35,5 +35,59 @@ public class TesKlikButton {
         onView(withId(R.id.button0)).perform(click());
         onView(withId(R.id.input)).check(matches(withText("1234567890")));
     }
+    @Test
+    public void tomboltitik(){
+        onView(withId(R.id.button_dot)).perform(click());
+        onView(withId(R.id.input)).check(matches(withText(".")));
+    }
+
+    @Test
+    public void tomboltambah(){
+        onView(withId(R.id.button_add)).perform(click());
+        onView(withId(R.id.input)).check(matches(withText("")));
+    }
+
+    @Test
+    public void tombolkurang(){
+        onView(withId(R.id.button_sub)).perform(click());
+        onView(withId(R.id.input)).check(matches(withText("")));
+    }
+
+    @Test
+    public void tombolkali(){
+        onView(withId(R.id.button_multi)).perform(click());
+        onView(withId(R.id.input)).check(matches(withText("")));
+    }
+
+    @Test
+    public void tombolbagi(){
+        onView(withId(R.id.button_divide)).perform(click());
+        onView(withId(R.id.input)).check(matches(withText("")));
+    }
+
+    @Test
+    public void tombolsamadengan(){
+        onView(withId(R.id.button_equal)).perform(click());
+        onView(withId(R.id.input)).check(matches(withText("")));
+    }
+
+    @Test
+    public void tombolpara1(){
+        onView(withId(R.id.button_para1)).perform(click());
+        onView(withId(R.id.input)).check(matches(withText("")));
+    }
+
+    @Test
+    public void tombolpara2(){
+        onView(withId(R.id.button_para2)).perform(click());
+        onView(withId(R.id.input)).check(matches(withText("")));
+    }
+
+    @Test
+    public void tombolclear(){
+        onView(withId(R.id.button_clear)).perform(click());
+        onView(withId(R.id.input)).check(matches(withText("")));
+    }
+
 
 }
